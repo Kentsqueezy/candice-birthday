@@ -1,0 +1,313 @@
+:root {
+  --cream: #f7f1e9;
+  --paper: #fffdf9;
+  --ink: #332a27;
+  --muted: #786d65;
+  --rust: #b5654a;
+  --rose: #e9c5b9;
+  --sage: #a8ae91;
+  --line: #e7ddd2;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+.topbar { height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 7vw; border-bottom: 1px solid rgba(80,60,45,.1); }
+.wordmark { font-family: var(--serif); font-size: 16px; letter-spacing: .015em; }
+.wordmark span { color: var(--rust); padding-left: 5px; }
+nav { display: flex; gap: 34px; color: var(--muted); font-size: 12px; }
+nav a:hover { color: var(--rust); }
+.hero { min-height: 580px; padding: 68px 15vw 85px; display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: 7vw; position: relative; overflow: hidden; }
+.eyebrow { color: var(--rust); text-transform: uppercase; letter-spacing: .15em; font-size: 10px; font-weight: 700; margin: 0 0 17px; }
+.sparkle { padding: 0 7px; }
+h1, h2 { font-family: var(--serif); font-weight: 500; letter-spacing: -.04em; line-height: 1.08; margin: 0; }
+h1 { font-size: clamp(58px, 7vw, 92px); }
+.birthday-greeting { position: relative; display: inline-grid; justify-items: center; gap: 1px; margin: 0 0 21px -8px; padding: 11px 17px 13px; border: 1px solid #bd654d; border-radius: 48% 44% 51% 42% / 17% 22% 15% 20%; color: #fffdf3; background: #d86b55; box-shadow: 3px 4px 0 #e6b651; transform: rotate(-2.5deg); }
+.birthday-greeting::before { content: ""; position: absolute; z-index: -1; inset: 5px -5px -4px 4px; border: 1px dashed #d86b55; border-radius: 45% 52% 43% 58% / 24% 15% 25% 17%; transform: rotate(3deg); }
+.birthday-greeting::after { content: "✦"; position: absolute; color: #71846c; font: 22px/1 var(--sans); right: -18px; bottom: -12px; transform: rotate(12deg); }
+.birthday-greeting span { font: 700 13px/1.2 "Architects Daughter", cursive; letter-spacing: .09em; text-transform: uppercase; }.birthday-greeting strong { position: relative; z-index: 1; color: #fff8dc; font: 24px/1.18 "Architects Daughter", cursive; letter-spacing: -.035em; white-space: nowrap; }
+h1 em, h2 em { font-weight: 500; color: var(--rust); }
+.intro { max-width: 300px; color: var(--muted); font-size: 15px; margin: 22px 0 28px; }
+.button { display: inline-flex; gap: 28px; align-items: center; background: var(--ink); color: white; padding: 12px 18px; border-radius: 2px; font-size: 11px; transition: background .2s, transform .2s; }
+.button:hover { background: var(--rust); transform: translateY(-2px); }
+.hero-art { position: relative; min-height: 360px; background: #ead8c6; overflow: hidden; display: grid; place-items: center; transform: rotate(2deg); box-shadow: 0 20px 45px #6d4c3517; }
+.hero-art { outline: 1px solid #dfc9b5; outline-offset: -8px; }
+.bunting { position: absolute; inset: 0 8% auto; height: 52px; display: flex; justify-content: space-around; z-index: 2; }
+.bunting::before { content: ""; position: absolute; left: 0; right: 0; top: 8px; height: 22px; border-top: 1px solid #8d6958; border-radius: 50%; }
+.bunting i { position: relative; margin-top: 15px; width: 0; height: 0; border-left: 12px solid transparent; border-right: 12px solid transparent; border-top: 23px solid #b5654a; }
+.bunting i:nth-child(2n) { border-top-color: #a8ae91; margin-top: 20px; }.bunting i:nth-child(3n) { border-top-color: #e7b995; }
+.hero-art::before, .hero-art::after { content: ""; position: absolute; border: 1px solid #fff8; border-radius: 50%; width: 300px; height: 300px; }
+.hero-art::after { width: 370px; height: 370px; }
+.sun { position: absolute; width: 190px; height: 190px; border-radius: 50%; background: #d88d6e; top: 45px; right: 13%; opacity: .88; }
+.card-note { width: 176px; height: 220px; background: var(--paper); z-index: 1; transform: rotate(-7deg); box-shadow: 0 10px 30px #533c2d2a; display: flex; flex-direction: column; justify-content: center; align-items: center; font-family: "Architects Daughter", cursive; color: var(--rust); line-height: 1.1; clip-path: polygon(1% 1%,99% 0,100% 98%,1% 100%); }
+.card-note span { font-size: 13px; }
+.card-note strong { font-size: 44px; font-weight: 500; transform: rotate(-4deg); }
+.cake { position: absolute; z-index: 2; right: 12%; bottom: 50px; width: 62px; height: 72px; transform: rotate(-2deg); }
+.cake-body { position: absolute; left: 4px; bottom: 10px; width: 54px; height: 32px; border-radius: 6px 6px 9px 9px; background: #fff7ed; box-shadow: inset 0 9px #e4a28a; }
+.cake-body::before { content: ""; position: absolute; top: 8px; left: 5px; width: 44px; height: 7px; border-radius: 50%; background: #ce7d66; }
+.cake-top { position: absolute; top: 21px; left: 4px; width: 54px; height: 17px; background: #f8eee0; border-radius: 50%; }
+.cake-plate { position: absolute; left: 0; bottom: 4px; width: 62px; height: 9px; border-radius: 50%; background: #a8ae91; }
+.candle { position: absolute; left: 28px; top: 0; width: 5px; height: 25px; background: repeating-linear-gradient(135deg,#fff6e7 0 3px,#cf8069 3px 5px); z-index: 1; }
+.candle i { position: absolute; left: -2px; top: -9px; width: 9px; height: 12px; background: #e7a755; border-radius: 80% 15% 70% 30%; transform: rotate(45deg); }
+.flower { position: absolute; color: #f7eee0; z-index: 2; text-shadow: 0 2px 12px #8c573e22; }
+.flower-one { font-size: 70px; top: 24px; left: 18%; }.flower-two { font-size: 48px; bottom: 33px; right: 13%; color: #a6a98a; }.flower-three { font-size: 30px; bottom: 46px; left: 17%; color: #c9836b; }
+.art-caption { position: absolute; bottom: 9px; font-family: "Architects Daughter", cursive; color: #725c4f; font-size: 13px; transform: rotate(-2deg); }
+.doodle-star { position: absolute; z-index: 2; color: #fff5d8; font: 30px/1 "Architects Daughter", cursive; }
+.doodle-star-one { top: 26%; right: 19%; transform: rotate(13deg); }.doodle-star-two { bottom: 24%; left: 13%; color: #b5654a; font-size: 35px; transform: rotate(-12deg); }
+.hand-note { position: absolute; z-index: 3; top: 57px; left: 13%; color: #8d5544; font: 15px/1 "Architects Daughter", cursive; transform: rotate(-9deg); }
+.side-note { position: absolute; right: 5%; top: 50%; writing-mode: vertical-rl; color: #98897d; font-size: 9px; letter-spacing: .15em; text-transform: uppercase; }
+.gallery-section { background: var(--paper); padding: 92px 12vw 80px; text-align: center; }
+.section-heading { max-width: 500px; margin: 0 auto 50px; }
+h2 { font-size: clamp(37px, 5vw, 56px); }
+.section-intro { max-width: 370px; margin: 17px auto 0; color: var(--muted); font-size: 13px; }
+.photo-groups { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; text-align: left; max-width: 900px; margin: auto; }
+.photo-group.offset { padding-top: 28px; }
+.photo-placeholder { min-height: 250px; background: #efe5d9; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #9b8779; font-size: 11px; border: 1px solid #e9dfd4; }
+.photo-image { display: block; width: 100%; height: 250px; min-height: 0; object-fit: cover; }
+.photo-image.memory { object-fit: contain; background: #eee1d8; }
+.photo-placeholder.portrait { background: #eaded4; }.photo-placeholder.family { background: #e7e9dc; }.photo-placeholder.memory { background: #f0e4dd; }
+.placeholder-icon { border: 1px solid #aa9382; border-radius: 50%; width: 30px; height: 30px; line-height: 27px; text-align: center; font-size: 18px; }
+.photo-label { font-family: var(--serif); color: var(--rust); margin: 15px 0 1px; font-size: 12px; }.photo-label span { color: var(--ink); font-size: 20px; padding-left: 8px; }
+.photo-hint { color: var(--muted); margin: 0; font-size: 11px; }.gallery-footnote { margin: 38px 0 0; color: #9b9085; font-style: italic; font-family: var(--serif); font-size: 14px; }
+.letter-section { min-height: 460px; display: grid; grid-template-columns: 1fr 260px; align-items: center; gap: 8vw; padding: 72px 20vw; }
+.letter-copy { max-width: 400px; }.letter-copy > p:last-child { color: var(--muted); max-width: 310px; font-size: 13px; margin-top: 18px; }
+.envelope-button { position: relative; width: 220px; height: 160px; margin: 22px auto 0; padding: 0; border: 0; background: transparent; cursor: pointer; transition: transform .25s; }
+.envelope-button:hover { transform: translateY(-5px) rotate(-1deg); }.envelope-shadow { position: absolute; inset: 15px 8px 0; background: #63483225; filter: blur(12px); }
+.envelope-back { position: absolute; inset: 8px 0 0; background: #d5a68f; border-radius: 3px; }
+.letter-paper { position: absolute; height: 122px; width: 184px; left: 18px; top: 0; background: #fffdf9; box-shadow: 0 2px 7px #513b2c20; display: grid; place-items: center; transition: transform .45s; color: var(--rust); font-family: var(--serif); font-size: 15px; font-style: italic; }
+.envelope-flap { position: absolute; left: 0; top: 8px; width: 0; height: 0; border-left: 110px solid transparent; border-right: 110px solid transparent; border-top: 82px solid #c58e76; transform-origin: top; transition: transform .4s .1s; z-index: 2; }
+.envelope-front { position: absolute; inset: 8px 0 0; background: #e5bba7; clip-path: polygon(0 100%,0 0,50% 57%,100% 0,100% 100%); z-index: 3; }
+.seal { position: absolute; z-index: 4; left: calc(50% - 15px); top: 71px; color: #fff8ed; background: var(--rust); width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; font-size: 16px; transition: opacity .2s; }
+.envelope-button.open .envelope-flap { transform: rotateX(180deg); z-index: 0; }.envelope-button.open .letter-paper { transform: translateY(-70px); }.envelope-button.open .seal { opacity: 0; }
+.letter-note { grid-column: 1 / -1; justify-self: center; max-width: 520px; width: 100%; background: var(--paper); padding: 30px 38px; border: 1px solid var(--line); box-shadow: 0 12px 35px #654a3310; font-family: var(--serif); font-size: 16px; animation: appear .35s ease-out; }
+.letter-note p { margin: 0 0 12px; }.letter-note .eyebrow { font-family: var(--sans); font-size: 9px; }.edit-hint { color: var(--rust); font-style: italic; }
+@keyframes appear { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+footer { border-top: 1px solid rgba(80,60,45,.12); padding: 24px 7vw; color: #8f8075; display: flex; justify-content: space-between; font-size: 10px; letter-spacing: .06em; }
+footer span:nth-child(2) { color: var(--rust); font-size: 15px; }
+@media (max-width: 760px) {
+  .topbar { height: 64px; padding: 0 6vw; }.wordmark { font-size: 14px; } nav { gap: 16px; font-size: 10px; }
+  .hero { padding: 58px 9vw 70px; grid-template-columns: 1fr; gap: 38px; }.hero-art { width: min(100%, 420px); min-height: 320px; justify-self: center; }.side-note { display: none; }
+  .birthday-greeting { margin-bottom: 12px; }.cake { right: 7%; bottom: 39px; transform: scale(.85) rotate(-2deg); transform-origin: bottom right; }
+  .gallery-section { padding: 70px 8vw; }.section-heading { margin-bottom: 35px; }.photo-groups { grid-template-columns: 1fr; max-width: 390px; gap: 30px; }.photo-group.offset { padding-top: 0; }.photo-placeholder { min-height: 260px; }
+  .letter-section { grid-template-columns: 1fr; text-align: center; padding: 72px 9vw; gap: 10px; }.letter-copy { margin: auto; }.letter-copy > p:last-child { margin-left: auto; margin-right: auto; }.letter-note { padding: 25px; text-align: left; }
+  footer { padding: 20px 6vw; }
+}
+@media (max-width: 380px) { nav { gap: 10px; } nav a { font-size: 9px; } .topbar { padding: 0 5vw; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+
+/* Handmade birthday-card layer: paper, pasted notes, and imperfect sticker edges. */
+body { background-color: #f2e7d8; background-image: radial-gradient(#9b79531a .7px, transparent .7px), linear-gradient(115deg, #fff7e52b, transparent 42%, #dcbda61c); background-size: 8px 8px, auto; }
+.topbar { position: relative; z-index: 3; background: #f8f1e8; border-bottom: 1px dashed #cbb8a4; }
+.wordmark { transform: rotate(-1deg); }.wordmark span { display: inline-block; transform: rotate(12deg); }
+.topbar::after { content: "✂"; position: absolute; right: 7vw; bottom: -12px; padding: 0 6px; background: #f2e7d8; color: #a08a70; font: 15px/1 var(--sans); }
+.hero { margin: 25px auto 34px; width: min(1180px, 94%); padding-left: 12vw; padding-right: 12vw; background: #faf5ec; border: 1px solid #e4d6c5; box-shadow: 0 4px 0 #d9c7b3, 0 16px 35px #6d4c3510; }
+.hero::before { content: "✦  confetti  ✦"; position: absolute; right: 14%; top: 9%; color: #cc9d56; font: 15px "Architects Daughter", cursive; transform: rotate(8deg); }
+.hero::after { content: "for Candice"; position: absolute; right: 5%; bottom: 16%; padding: 8px 14px; color: #fdf6e8; background: #819078; border-radius: 46% 52% 43% 55% / 53% 40% 58% 42%; font: 14px "Architects Daughter", cursive; transform: rotate(7deg); box-shadow: 2px 3px 0 #d2b99e; }
+.hero-copy { position: relative; z-index: 1; }
+.hero-copy::before { content: ""; position: absolute; width: 65px; height: 19px; top: -26px; left: 32%; background: #e9c5b9b8; transform: rotate(-7deg); clip-path: polygon(3% 0,100% 4%,95% 100%,0 92%); }
+.eyebrow { font-family: "Architects Daughter", cursive; letter-spacing: .08em; font-size: 12px; text-transform: none; }
+.intro { font-size: 16px; }
+.button { position: relative; background: #7f8b73; border-radius: 2px 4px 3px 5px; box-shadow: 3px 4px 0 #d0ae80; transform: rotate(-1deg); }
+.button::after { content: "✦"; position: absolute; right: -12px; top: -12px; color: #d46c58; font-size: 18px; }
+.hero-art { border: 8px solid #fffaf1; outline: 1px solid #d6c5b2; box-shadow: 5px 7px 0 #d2bda6, 0 16px 30px #6d4c3517; }
+.hero-art::before { border-style: dashed; border-color: #fff9; }
+.card-note { border: 1px solid #eee2d0; box-shadow: 4px 5px 0 #c6a88a, 0 10px 25px #533c2d20; }
+.flower { filter: drop-shadow(1px 2px 0 #98725c55); }
+.gallery-section { position: relative; margin: 0 auto 34px; width: min(1180px, 94%); padding-top: 82px; background: #fffaf2; border: 1px solid #e5d6c4; box-shadow: 0 4px 0 #d9c7b3, 0 15px 30px #6d4c3510; }
+.gallery-section::before { content: "little things, big love"; position: absolute; top: 22px; left: 7%; padding: 5px 13px 7px; color: #765c48; background: #f3d998; font: 14px "Architects Daughter", cursive; transform: rotate(-4deg); clip-path: polygon(2% 4%,96% 0,100% 90%,5% 100%); }
+.gallery-section::after { content: "♥"; position: absolute; right: 8%; top: 20px; color: #d36b58; font-size: 32px; transform: rotate(12deg); text-shadow: 2px 3px 0 #efcf9f; }
+.section-heading { position: relative; }
+.section-heading::after { content: "a little collection"; display: inline-block; margin-top: 15px; padding: 3px 12px; border: 1px dashed #b5977d; border-radius: 50%; color: #8c755f; font: 13px "Architects Daughter", cursive; transform: rotate(2deg); }
+.photo-groups { gap: 34px; }
+.photo-group { position: relative; padding: 12px 12px 16px; background: #fffefa; border: 1px solid #eadfd1; box-shadow: 3px 5px 0 #d7c4af, 0 8px 18px #5a463014; transform: rotate(-1.5deg); }
+.photo-group:nth-child(2) { transform: rotate(2deg); }.photo-group:nth-child(3) { transform: rotate(-.7deg); }
+.photo-group::before { content: ""; position: absolute; z-index: 2; top: -11px; left: 36%; width: 66px; height: 19px; background: #e9c5b9c9; clip-path: polygon(2% 4%,100% 0,97% 92%,0 100%); transform: rotate(-5deg); }
+.photo-group:nth-child(2)::before { background: #dbe0c6dd; transform: rotate(5deg); }.photo-group:nth-child(3)::before { background: #edcf91dd; }
+.photo-placeholder { min-height: 230px; border: 1px dashed #c6ae98; position: relative; }
+.photo-placeholder::after { content: "✧"; position: absolute; right: 12px; top: 8px; color: #b5654a; font: 19px "Architects Daughter", cursive; transform: rotate(12deg); }
+.photo-label { font-family: "Architects Daughter", cursive; }.photo-label span { font-family: var(--serif); }.photo-hint { font-family: "Architects Daughter", cursive; font-size: 13px; }
+.letter-section { position: relative; width: min(1180px, 94%); margin: 0 auto 34px; padding: 72px 15vw; background: #f9f0df; border: 1px solid #dfcdb8; box-shadow: 0 4px 0 #d4bea5, 0 14px 30px #6d4c3510; }
+.letter-section::before { content: "open me!"; position: absolute; right: 15%; top: 24px; padding: 5px 14px; border: 1px dashed #b5654a; border-radius: 50%; color: #a95e4b; font: 14px "Architects Daughter", cursive; transform: rotate(8deg); }
+.letter-copy::after { content: "written with love & a little bit of glitter"; display: inline-block; margin-top: 16px; color: #95806c; font: 13px "Architects Daughter", cursive; transform: rotate(-2deg); }
+.envelope-button { filter: drop-shadow(3px 5px 0 #c8ad90); }
+.letter-note { background: #fffaf0; border: 1px dashed #cfb99e; box-shadow: 4px 5px 0 #dbc6ad; transform: rotate(-.5deg); }
+footer { width: min(1180px, 94%); margin: 0 auto; background: #f8f1e8; border: 1px dashed #cfbda9; }
+@media (max-width: 760px) {
+  .topbar::after { right: 6vw; }
+  .hero { width: 94%; margin-top: 16px; padding: 54px 8vw 65px; }
+  .hero::before { right: 10%; top: 15px; font-size: 12px; }.hero::after { right: 3%; bottom: 7%; font-size: 12px; }
+  .hero-copy::before { left: 55%; top: -18px; width: 54px; height: 15px; }
+  .gallery-section { width: 94%; padding: 70px 8vw; }.gallery-section::before { top: 16px; left: 5%; font-size: 12px; }.gallery-section::after { right: 5%; top: 11px; }
+  .photo-groups { gap: 28px; }.photo-group { padding: 10px 10px 14px; }.photo-placeholder { min-height: 250px; }.photo-image { height: 260px; }
+  .letter-section { width: 94%; padding: 66px 9vw; }.letter-section::before { top: 17px; right: 10%; }
+  footer { width: 94%; }
+}
+
+/* A refined, grown-up feminine palette for the handmade card details. */
+:root { --cream: #f7efe8; --paper: #fffaf5; --ink: #382c32; --muted: #796a70; --rust: #bd4657; --rose: #e9c5cf; --sage: #92917a; --line: #e4d4d2; --korea-blue: #315f91; }
+body { background-color: #f3e9e3; background-image: radial-gradient(#8d64751a .7px, transparent .7px), linear-gradient(115deg, #fff8f52b, transparent 42%, #d8c0c61c); }
+.topbar { background: #f8f1ec; border-color: #d8c7ca; }
+.topbar::after { background: #f3e9e3; color: #8f7c80; }
+.hero { background: #fbf6f1; border-color: #e4d6d8; box-shadow: 0 4px 0 #d9c7cc, 0 16px 35px #6d4c3510; }
+.hero::before { content: "✦  make a wish  ✦"; color: #b68b46; }
+.hero::after { background: #887c83; box-shadow: 2px 3px 0 #d7bfc2; }
+.birthday-greeting { border-color: #93485b; background: #ad5368; box-shadow: 3px 4px 0 #d5ad62; }
+.birthday-greeting::before { border-color: #ad5368; }
+.birthday-greeting::after { color: #8b8b72; }
+.button { background: #655966; box-shadow: 3px 4px 0 #d0b77f; }
+.button::after { color: #b96b7f; }
+.hero-art { border-color: #fffaf7; outline-color: #d6c5cb; box-shadow: 5px 7px 0 #d2bdc5, 0 16px 30px #6d4c3517; }
+.card-note { border-color: #eee2e4; box-shadow: 4px 5px 0 #c6a8b0, 0 10px 25px #533c2d20; }
+.gallery-section { background: #fffaf7; border-color: #e5d8dc; box-shadow: 0 4px 0 #d9c7cc, 0 15px 30px #6d4c3510; }
+.gallery-section::before { color: #6d515b; background: #f1dfb8; }
+.gallery-section::after { content: "♡"; color: #ad5368; text-shadow: 2px 3px 0 #efcfda; }
+.photo-group { border-color: #eadfe0; box-shadow: 3px 5px 0 #d7c9cb, 0 8px 18px #5a463014; }
+.photo-group::before { background: #e9c5cfc9; }
+.photo-group:nth-child(2)::before { background: #d8ddd1dd; }.photo-group:nth-child(3)::before { background: #eddbb7dd; }
+.photo-placeholder::after { color: #a75065; }
+.letter-section { background: #f8f0eb; border-color: #dfd0d5; box-shadow: 0 4px 0 #d4c2c8, 0 14px 30px #6d4c3510; }
+.letter-section::before { border-color: #a75065; color: #8f4a5c; }
+.letter-note { background: #fffaf7; border-color: #cfb9c0; box-shadow: 4px 5px 0 #dbc6cd; }
+footer { background: #f8f1ec; border-color: #cfbdc4; }
+
+/* A quiet South Korea-inspired red, blue, and white accent palette. */
+.button { background: var(--korea-blue); box-shadow: 3px 4px 0 #d1aa74; }
+.button:hover { background: #254d7b; }
+.birthday-greeting { background: #bd4657; border-color: #963544; }
+.birthday-greeting::before { border-color: #bd4657; }
+.hero::after { background: var(--korea-blue); }
+.hero::before { color: var(--korea-blue); }
+.doodle-star-one { color: #bd4657; }
+.doodle-star-two { color: var(--korea-blue); }
+.cake-plate { background: var(--korea-blue); }
+.flower-three { color: #bd4657; }
+.letter-section::before { color: var(--korea-blue); border-color: var(--korea-blue); }
+.gallery-section::after { color: #bd4657; }
+
+/* Birthday motion: an entrance, floating decorations, scroll reveals, and confetti. */
+.hero-copy { animation: copy-arrives .8s cubic-bezier(.2,.75,.25,1) both; }
+.hero-art { animation: card-arrives .95s .16s cubic-bezier(.2,.75,.25,1) both; }
+.birthday-greeting { animation: greeting-bounce .8s .48s cubic-bezier(.2,.9,.25,1.3) both, greeting-wiggle 5s 1.5s ease-in-out infinite; }
+.hero::before { animation: sticker-float 3.8s 1s ease-in-out infinite; }
+.hero::after { animation: sticker-float 4.2s 1.4s ease-in-out infinite reverse; }
+.doodle-star-one { animation: twinkle 2s ease-in-out infinite; }
+.doodle-star-two { animation: twinkle 2.6s .6s ease-in-out infinite; }
+.hand-note { animation: note-scribble 1s .8s ease-out both; }
+.sun { animation: sun-glow 4s ease-in-out infinite; }
+.flower-one { animation: flower-dance 5s ease-in-out infinite; transform-origin: center; }
+.flower-two { animation: flower-dance 4s .5s ease-in-out infinite reverse; transform-origin: center; }
+.flower-three { animation: flower-dance 4.5s 1s ease-in-out infinite; transform-origin: center; }
+.cake { animation: cake-bob 2.8s ease-in-out infinite; }
+.card-note { animation: note-tilt 4.5s ease-in-out infinite; }
+.button { animation: button-pop .6s .8s cubic-bezier(.2,.8,.2,1.2) both; }
+.envelope-button { animation: envelope-hover 3s ease-in-out infinite; }
+.envelope-button.open { animation: envelope-open .55s cubic-bezier(.2,.8,.2,1.2) both; }
+.envelope-button.open .envelope-flap { transform: rotateX(180deg); }
+.envelope-button.open .letter-paper { transform: translateY(-78px) rotate(-2deg); }
+.envelope-button.open .seal { animation: seal-pop .35s ease-out both; }
+.letter-note:not([hidden]) { animation: note-reveal .65s cubic-bezier(.2,.8,.2,1) both; }
+.motion-ready .photo-group { opacity: 0; transform: translateY(35px) rotate(-3deg); }
+.motion-ready .photo-group:nth-child(2) { transform: translateY(35px) rotate(3deg); }
+.motion-ready .photo-group.is-visible { animation: photo-arrives .75s cubic-bezier(.2,.75,.25,1) both; }
+.motion-ready .photo-group:nth-child(2).is-visible { animation-delay: .12s; }
+.motion-ready .photo-group:nth-child(3).is-visible { animation-delay: .24s; }
+.confetti-piece { position: absolute; z-index: 8; top: -18px; left: var(--left); width: 8px; height: 13px; border-radius: 2px 1px 3px 1px; background: var(--confetti-color); opacity: 0; pointer-events: none; animation: confetti-fall var(--duration) var(--delay) cubic-bezier(.22,.7,.4,1) forwards; }
+.confetti-piece:nth-child(3n) { width: 6px; height: 6px; border-radius: 50%; }
+.confetti-piece:nth-child(3n + 1) { width: 5px; height: 15px; border-radius: 4px; }
+@keyframes copy-arrives { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes card-arrives { from { opacity: 0; transform: translateY(26px) rotate(5deg) scale(.94); } to { opacity: 1; transform: translateY(0) rotate(2deg) scale(1); } }
+@keyframes greeting-bounce { 0% { opacity: 0; transform: translateY(-20px) rotate(-10deg) scale(.75); } 75% { opacity: 1; transform: translateY(3px) rotate(1deg) scale(1.06); } 100% { transform: translateY(0) rotate(-2.5deg) scale(1); } }
+@keyframes greeting-wiggle { 0%, 92%, 100% { rotate: 0deg; } 95% { rotate: -2deg; } 98% { rotate: 2deg; } }
+@keyframes sticker-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+@keyframes twinkle { 0%, 100% { scale: .75; rotate: -12deg; opacity: .65; } 50% { scale: 1.2; rotate: 14deg; opacity: 1; } }
+@keyframes note-scribble { from { opacity: 0; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+@keyframes sun-glow { 0%, 100% { scale: 1; box-shadow: 0 0 0 #e7ba7a00; } 50% { scale: 1.04; box-shadow: 0 0 28px #e7ba7a66; } }
+@keyframes flower-dance { 0%, 100% { rotate: -4deg; translate: 0 0; } 50% { rotate: 5deg; translate: 0 -5px; } }
+@keyframes cake-bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+@keyframes note-tilt { 0%, 100% { rotate: -7deg; } 50% { rotate: -4deg; } }
+@keyframes button-pop { from { opacity: .3; scale: .85; } to { opacity: 1; scale: 1; } }
+@keyframes envelope-hover { 0%, 100% { translate: 0 0; } 50% { translate: 0 -7px; } }
+@keyframes envelope-open { 0% { scale: 1; } 55% { scale: 1.09; } 100% { scale: 1; } }
+@keyframes seal-pop { to { scale: 1.5; opacity: 0; } }
+@keyframes note-reveal { from { opacity: 0; transform: translateY(24px) rotate(-2deg) scale(.96); } to { opacity: 1; transform: translateY(0) rotate(-.5deg) scale(1); } }
+@keyframes photo-arrives { to { opacity: 1; transform: translateY(0) rotate(var(--card-tilt, -1.5deg)); } }
+@keyframes confetti-fall { 0% { opacity: 0; translate: 0 -25px; rotate: 0deg; } 12% { opacity: .95; } 100% { opacity: 0; translate: 30px 650px; rotate: var(--spin); } }
+@media (max-width: 760px) {
+  .hero::after { animation-duration: 5s; }
+  .motion-ready .photo-group:nth-child(2).is-visible { animation-delay: .1s; }
+  @keyframes confetti-fall { 0% { opacity: 0; translate: 0 -25px; rotate: 0deg; } 12% { opacity: .95; } 100% { opacity: 0; translate: -18px 720px; rotate: var(--spin); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy, .hero-art, .birthday-greeting, .hero::before, .hero::after, .doodle-star-one, .doodle-star-two, .hand-note, .sun, .flower-one, .flower-two, .flower-three, .cake, .card-note, .button, .envelope-button, .envelope-button.open, .envelope-button.open .seal, .letter-note:not([hidden]), .confetti-piece, .motion-ready .photo-group, .motion-ready .photo-group.is-visible { animation: none !important; transition-duration: .01ms !important; }
+  .motion-ready .photo-group, .motion-ready .photo-group:nth-child(2) { opacity: 1; transform: none; }
+}
+
+/* Big opening burst and a paper-letter flight from the envelope into the page. */
+.confetti-overlay { position: fixed; inset: 0; z-index: 30; overflow: hidden; pointer-events: none; }
+.confetti-piece { position: fixed; top: var(--start-y); left: var(--start-x); z-index: 30; width: 9px; height: 16px; border-radius: 2px 1px 3px 1px; opacity: 0; background: var(--confetti-color); will-change: transform, opacity; animation: confetti-explosion var(--duration) var(--delay) cubic-bezier(.16,.82,.24,1) forwards; }
+.confetti-piece:nth-child(3n) { width: 8px; height: 8px; border-radius: 50%; }
+.confetti-piece:nth-child(3n + 1) { width: 5px; height: 23px; border-radius: 4px; }
+.confetti-piece:nth-child(5n) { width: 16px; height: 5px; border-radius: 3px; }
+.envelope-button.open { animation: envelope-explosion .7s cubic-bezier(.2,.8,.2,1) both; }
+.envelope-button.open .envelope-back { animation: envelope-shake .6s ease-out both; }
+.envelope-button.open .envelope-flap { transform: rotateX(180deg); }
+.envelope-button.open .letter-paper { opacity: 0; transform: translateY(-48px) rotate(-8deg) scale(1.06); transition: transform .48s cubic-bezier(.16,.82,.24,1), opacity .5s .12s ease; }
+.letter-note:not([hidden]) { animation: none; }
+.letter-note.heartbeat { animation: letter-heartbeat 2.1s 0s ease-in-out infinite; transform-origin: center; }
+.letter-note.flight-hidden { opacity: 0; }
+.letter-flight { position: fixed !important; z-index: 60; display: block; grid-column: auto; justify-self: auto; max-width: none; min-height: 0; margin: 0; overflow: hidden; pointer-events: none; transform-origin: top left; background: #fffaf7; border: 1px solid #cfb9c0; box-shadow: 0 18px 50px #392a3655, 5px 6px 0 #dbc6cd; }
+.letter-flight::before { content: ""; position: absolute; inset: 12px; border: 1px dashed #e3c9ca; pointer-events: none; }
+@keyframes confetti-explosion {
+  0% { opacity: 0; transform: translate(0,0) rotate(0deg) scale(.25); }
+  7% { opacity: 1; transform: translate(0,0) rotate(0deg) scale(1.25); }
+  40% { opacity: 1; transform: translate(var(--burst-x),var(--burst-y)) rotate(var(--burst-spin)) scale(1); }
+  100% { opacity: 0; transform: translate(var(--land-x),var(--land-y)) rotate(var(--spin)) scale(.65); }
+}
+@keyframes envelope-explosion {
+  0% { transform: scale(1) rotate(0); }
+  18% { transform: scale(1.16) rotate(-5deg); }
+  34% { transform: scale(.95) rotate(4deg); }
+  52% { transform: scale(1.09) rotate(-2deg); }
+  70% { transform: scale(.99) rotate(1deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+@keyframes envelope-shake {
+  0%, 100% { translate: 0 0; }
+  20% { translate: -7px 0; }
+  40% { translate: 6px -2px; }
+  60% { translate: -4px 1px; }
+  80% { translate: 3px 0; }
+}
+@keyframes letter-heartbeat {
+  0%, 100% { transform: rotate(-.5deg) scale(1); box-shadow: 4px 5px 0 #dbc6cd; }
+  7% { transform: rotate(-.5deg) scale(1.035); box-shadow: 5px 7px 0 #d9b9c1, 0 0 15px #bd465722; }
+  14% { transform: rotate(-.5deg) scale(1); box-shadow: 4px 5px 0 #dbc6cd; }
+  23% { transform: rotate(-.5deg) scale(1.055); box-shadow: 5px 8px 0 #d9b9c1, 0 0 22px #bd465733; }
+  34% { transform: rotate(-.5deg) scale(1); box-shadow: 4px 5px 0 #dbc6cd; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .confetti-overlay { display: none; }
+  .confetti-piece, .envelope-button.open, .envelope-button.open .envelope-back, .envelope-button.open .letter-paper { animation: none !important; transition: none !important; }
+  .letter-note.heartbeat { animation: none !important; }
+  .envelope-button.open .letter-paper { opacity: 1; transform: translateY(-70px); }
+}
+
+/* Korean red-and-blue light spills out from behind each paper card. */
+body { background-color: #111a2c; background-image: radial-gradient(ellipse at 12% 18%, #315f9166 0, transparent 30%), radial-gradient(ellipse at 87% 32%, #bd465755 0, transparent 28%), radial-gradient(ellipse at 52% 78%, #315f914d 0, transparent 32%), radial-gradient(#ffffff10 .7px, transparent .7px); background-size: auto, auto, auto, 9px 9px; background-attachment: fixed; }
+.topbar { background: #fffaf5; box-shadow: 0 6px 28px #315f914f, 0 10px 35px #bd465733; }
+.hero, .gallery-section, .letter-section { position: relative; overflow: visible; box-shadow: 0 0 0 1px #ffffff3d, 0 0 24px #315f9175, 0 0 58px #bd465755, 0 20px 42px #315f9170, 0 4px 0 #d9c7cc; }
+.hero > :not(.light-beam), .gallery-section > :not(.light-beam), .letter-section > :not(.light-beam) { position: relative; z-index: 1; }
+.hero::before, .hero::after, .gallery-section::before, .gallery-section::after, .letter-section::before { z-index: 2; }
+.light-beam { position: absolute; z-index: 0; left: 5%; right: 5%; bottom: -30px; height: 55px; border-radius: 50%; pointer-events: none; background: linear-gradient(90deg, transparent, #315f91aa 14%, #bd4657d9 48%, #315f91c9 82%, transparent); filter: blur(24px); opacity: .95; animation: under-door-glow 3.6s ease-in-out infinite; }
+.hero .light-beam { bottom: -35px; height: 65px; }
+.gallery-section .light-beam { background: linear-gradient(90deg, transparent, #bd4657b8 18%, #315f91e6 52%, #bd4657b8 84%, transparent); animation-delay: .7s; }
+.letter-section .light-beam { background: linear-gradient(90deg, transparent, #315f91c9 15%, #bd4657e0 50%, #315f91d1 86%, transparent); animation-delay: 1.3s; }
+footer { background: #fffaf5; box-shadow: 0 0 24px #315f916e, 0 0 45px #bd465744, 0 10px 34px #111a2c; }
+@keyframes under-door-glow { 0%, 100% { opacity: .62; transform: scaleX(.92) translateY(0); filter: blur(25px); } 50% { opacity: 1; transform: scaleX(1.06) translateY(5px); filter: blur(31px); } }
+@media (max-width: 760px) {
+  body { background-attachment: scroll; }
+  .light-beam { left: 3%; right: 3%; bottom: -25px; height: 45px; filter: blur(20px); }
+}
+@media (prefers-reduced-motion: reduce) { .light-beam { animation: none; opacity: .85; } }
